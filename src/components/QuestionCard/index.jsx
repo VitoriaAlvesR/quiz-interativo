@@ -17,7 +17,7 @@ function QuestionCard({ question, timeSpent, onAnswer }) {
 
   return (
     <div className="question-card">
-      <h2>{question.text}</h2>
+      <h2>{question.question}</h2>
       <div className="options">
         {question.options.map((option, index) => (
           <label key={index}>
