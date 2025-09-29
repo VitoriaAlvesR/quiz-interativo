@@ -9,11 +9,16 @@ export default function App() {
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
 
-  const handleAnswer = (answer, time) => {
+  const handleAnswer = (answer) => {
     if (answer === questions[current].answer) {
       setScore(score + 1);
     }
     setCurrent(current + 1);
+  };
+
+  const handleRestart = () => {
+    setCurrent(0);
+    setScore(0);
   };
 
   return (
@@ -22,7 +27,7 @@ export default function App() {
       {current < questions.length ? (
         <QuestionCard question={questions[current]} onAnswer={handleAnswer} />
       ) : (
-        <ScoreBoard score={score} total={questions.length} />
+        <ScoreBoard score={score} total={questions.length} onRestart={handleRestart} />
       )}
     </div>
   );
