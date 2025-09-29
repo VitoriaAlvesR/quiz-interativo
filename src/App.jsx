@@ -1,50 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import QuestionCard from './components/QuestionCard';
-import ScoreBoard from './components/ScoreBoard';
-import questions from './data/questions';
+import { useState } from "react";
+import Header from "./components/Header";
+import QuestionCard from "./components/QuestionCard";
+import ScoreBoard from "./components/ScoreBoard";
+import questions from "./data/questions";
+import styles from "./App.module.css";
 
-function App() {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState([]);
-  const [timeSpent, setTimeSpent] = useState(0);
-  const [quizFinished, setQuizFinished] = useState(false);
+export default function App() {
+  const [current, setCurrent] = useState(0);
+  const [score, setScore] = useState(0);
 
-  useEffect(() => {
-    let timer;
-    if (!quizFinished && currentQuestionIndex < questions.length) {
-      timer = setInterval(() => {
-        setTimeSpent((prevTime) => prevTime + 1);
-      }, 1000);
+  const handleAnswer = (answer, time) => {
+    if (answer === questions[current].answer) {
+      setScore(score + 1);
     }
-    return () => clearInterval(timer);
-  }, [currentQuestionIndex, quizFinished]);
-
-  const handleAnswer = (answer) => {
-    setAnswers([...answers, answer]);
-    if (currentQuestionIndex + 1 < questions.length) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setTimeSpent(0);
-    } else {
-      setQuizFinished(true);
-    }
+    setCurrent(current + 1);
   };
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Header />
-      {!quizFinished ? (
-        <QuestionCard
-          question={questions[currentQuestionIndex]}
-          timeSpent={timeSpent}
-          onAnswer={handleAnswer}
-        />
+      {current < questions.length ? (
+        <QuestionCard question={questions[current]} onAnswer={handleAnswer} />
       ) : (
-        <ScoreBoard answers={answers} timeSpent={timeSpent} />
+        <ScoreBoard score={score} total={questions.length} />
       )}
     </div>
   );
 }
-
-export default App;
-

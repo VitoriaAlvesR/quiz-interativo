@@ -1,12 +1,9 @@
-import React from 'react';
-import './Header.module.css';
+import styles from "./Header.module.css";
 
-function Header() {
+export default function Header() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <h1>Quiz Interativo</h1>
     </header>
   );
 }
-
-export default Header;
