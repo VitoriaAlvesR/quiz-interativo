@@ -14,6 +14,8 @@ export default function QuestionCard({ question, onAnswer }) {
 
   // useEffect é usado para criar um efeito colateral: o timer
   useEffect(() => {
+    // Reseta o tempo quando a pergunta mudar
+    setTime(0);
     // Define um intervalo que incrementa "time" a cada 1 segundo
     const timer = setInterval(() => setTime((t) => t + 1), 1000);
 
