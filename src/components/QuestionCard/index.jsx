@@ -19,7 +19,7 @@ export default function QuestionCard({ question, onAnswer }) {
 
     // Retorna uma função de limpeza que limpa o timer quando o componente for desmontado
     return () => clearInterval(timer);
-  }, []); // Array vazio significa que o efeito roda apenas uma vez, ao montar o componente
+  }, [question]); // Array vazio significa que o efeito roda apenas uma vez, ao montar o componente
 
   return (
     <div className={styles.card}>
