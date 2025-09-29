@@ -1,14 +1,52 @@
-.question-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card {
+    background-color: #fff;
+    border: 2px solid #4cafef;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
   }
   
   .options {
-    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
   }
   
   .timer {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #e63946;
+  }
+  
+  .button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4cafef;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #368fcf;
   }
   

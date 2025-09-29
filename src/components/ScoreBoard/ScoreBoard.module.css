@@ -1,0 +1,17 @@
+.scoreboard {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #4caf50;
+  }
+  
