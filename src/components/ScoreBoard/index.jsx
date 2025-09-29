@@ -17,7 +17,9 @@ export default function ScoreBoard({ score, total, stats, history, onRestart }) 
       {/* Estatísticas principais */}
       <div className={styles.stats}>
         <div className={styles.card}>Pontuação Final: {score}</div>
-        <div className={styles.card}>Menor Tempo: {stats.minTime}</div>
+        <div className={styles.card}>Menor Tempo: {stats.minTime !== null
+    ? `${String(Math.floor(stats.minTime / 60)).padStart(2, "0")}:${String(stats.minTime % 60).padStart(2, "0")}`
+    : "--:--"}</div>
         {/* Mostra acertos em número e porcentagem */}
         <div className={styles.card}>
           Acertos: {score} ({((score / total) * 100).toFixed(0)}%)
