@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './QuestionCard.module.css';
+import '../../data/questions.js'
 
 function QuestionCard({ question, timeSpent, onAnswer }) {
   const [selectedAnswer, setSelectedAnswer] = useState('');

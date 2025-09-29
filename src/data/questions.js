@@ -69,4 +69,5 @@ const questions = [
    ]
    
 
+console.log("Questão atual:", questions);
 export default questions
