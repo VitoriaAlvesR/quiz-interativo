@@ -1,0 +1,14 @@
+.question-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .options {
+    margin: 10px 0;
+  }
+  
+  .timer {
+    margin-top: 10px;
+  }
+  
