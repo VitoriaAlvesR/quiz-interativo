@@ -1,16 +1,16 @@
-# React + Vite
+# Quiz Interativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objetivo
+Este projeto implementa um quiz interativo utilizando React, onde o usuário pode responder a 10 questões com 5 opções de resposta. O tempo de resposta é monitorado e exibido durante o quiz.
 
-Currently, two official plugins are available:
+## Estrutura dos Componentes
+- **App.jsx**: Componente principal que gerencia o estado do quiz.
+- **Header**: Exibe o título do quiz.
+- **QuestionCard**: Exibe a questão atual e opções de resposta.
+- **ScoreBoard**: Exibe as respostas e o tempo total após a conclusão do quiz.
+- **questions.js**: Contém as questões do quiz.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como Executar
+1. Clone o repositório.
+2. Instale as dependências com `npm install`.
+3. Execute o projeto com `npm run dev`.
