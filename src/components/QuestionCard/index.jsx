@@ -39,7 +39,7 @@ export default function QuestionCard({ question, onAnswer }) {
       </ul>
 
       {/* Mostra o tempo que o usuário passou na pergunta */}
-      <p>⏱ Tempo: {time}s</p>
+      <p className="time">⏱ Tempo: {time}s</p>
     </div>
   );
 }
